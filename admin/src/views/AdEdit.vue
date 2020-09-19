@@ -57,9 +57,11 @@ export default {
             let res;  // eslint-disable-line no-unused-vars
             if(this.id){
                 res = await this.$http.put(`rest/ads/${this.id}`, this.model) 
-                
+                console.log("ok1")
             } else {
-                res = await this.$http.post('rest/ads', this.model) 
+                res = await this.$http.post("rest/ads", this.model);
+                console.log("ok2")
+                console.log(res)
             }
             this.$router.push('/ads/list')
             this.$message({
